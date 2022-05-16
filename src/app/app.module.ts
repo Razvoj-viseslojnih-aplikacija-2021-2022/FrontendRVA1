@@ -19,7 +19,9 @@ import { ArtiklComponent } from './components/artikl/artikl.component';
 import { DobavljacComponent } from './components/dobavljac/dobavljac.component';
 import { PorudzbinaComponent } from './components/porudzbina/porudzbina.component';
 import { StavkaPorudzbineComponent } from './components/stavka-porudzbine/stavka-porudzbine.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import { MatToolbarModule } from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,10 @@ import { StavkaPorudzbineComponent } from './components/stavka-porudzbine/stavka
     MatSidenavModule,
     MatListModule,
     MatGridListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTableModule,
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

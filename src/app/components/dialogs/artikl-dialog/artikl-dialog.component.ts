@@ -56,18 +56,4 @@ export class ArtiklDialogComponent implements OnInit {
     this.snackBar.open('Odustali ste.', 'Zatvori', {duration: 1000});
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -18,6 +18,7 @@ export class PorudzbinaComponent implements OnInit, OnDestroy {
               'actions'];
   dataSource!: MatTableDataSource<Porudzbina>;
   subcription!: Subscription;
+  selektovanaPorudzbina!: Porudzbina;
 
   constructor(private porudzbinaService: ProudzbinaService,
     private dialog: MatDialog) { }
@@ -30,6 +31,10 @@ export class PorudzbinaComponent implements OnInit, OnDestroy {
     this.loadData();
   }
 
+  selectRow(row: Porudzbina) {
+    this.selektovanaPorudzbina = row;
+  }
+  
   public loadData(): void{
     this.subcription = this.porudzbinaService.getAllPorudzbinas().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);

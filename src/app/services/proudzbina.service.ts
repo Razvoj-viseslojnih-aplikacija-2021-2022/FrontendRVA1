@@ -16,6 +16,7 @@ export class ProudzbinaService {
   }
 
   public addPorudzbina(porudzbina: Porudzbina): Observable<any> {
+    porudzbina.id = 100;
     return  this.httpClient.post(`${PORUDZBINA_URL}`, porudzbina);
   }
 
